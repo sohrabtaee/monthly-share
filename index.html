@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monthly Share</title>
+    <title>Partners Monthly Share</title>
     <style>
-      .monthly-share-form {
+      .container {
         max-width: 500px;
         padding: 15px;
         margin: 0 auto;
@@ -24,16 +24,25 @@
     </style>
   </head>
   <body>
-    <form class="monthly-share-form" id="monthly-share-form">
-      <label for="monthly-expenses">Monthly Expenses</label>
-      <input type="number" id="monthly-expenses" min="100" required autofocus />
-      <label for="p1-income">Partner 1 Income</label>
-      <input type="number" id="p1-income" min="100" required />
-      <label for="p2-income">Partner 2 Income</label>
-      <input type="number" id="p2-income" min="100" required />
-      <button type="submit">Calculate Monthly Share</button>
-      <p id="monthly-share"></p>
-    </form>
+    <div class="container">
+      <h1>Calculate partners monthly share based on their income</h1>
+      <form class="monthly-share-form" id="monthly-share-form">
+        <label for="monthly-expenses">Monthly Expenses</label>
+        <input
+          type="number"
+          id="monthly-expenses"
+          min="100"
+          required
+          autofocus
+        />
+        <label for="p1-income">Partner 1 Income</label>
+        <input type="number" id="p1-income" min="100" required />
+        <label for="p2-income">Partner 2 Income</label>
+        <input type="number" id="p2-income" min="100" required />
+        <button type="submit">Calculate Monthly Share</button>
+        <p id="monthly-share"></p>
+      </form>
+    </div>
     <script>
       ;(function () {
         const monthlyExpensesInput = document.getElementById('monthly-expenses')
